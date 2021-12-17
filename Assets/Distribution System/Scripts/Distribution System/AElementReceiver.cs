@@ -9,12 +9,12 @@ namespace DistributionSystem
     {
         [Header("Universal Properties")]
         [SerializeField] protected IDistribute.ChemistryTypes _type;
-        [SerializeField] ADistributeReceiver _chemistryReceiver;
-        public ADistributeReceiver ChemistryReceiver
+        [SerializeField] ADistributeReceiver _distributionReceiver;
+        public ADistributeReceiver DistributionReceiver
         {
             get
             {
-                return _chemistryReceiver;
+                return _distributionReceiver;
             }
         }
         [SerializeField, Tooltip("0f = Full Resistance, 1f = Zero Resistance"), Range(0f, 1f)] protected float _susceptibility = 1f;
@@ -80,19 +80,19 @@ namespace DistributionSystem
             switch (type)
             {
                 case IDistribute.ChemistryTypes.HEAT:
-                    _chemistryReceiver._onReceiveHeat += EnterTrigger;
-                    _chemistryReceiver._onReceiveHeat += StayTrigger;
-                    _chemistryReceiver._onReceiveHeat += ExitTrigger;
+                    _distributionReceiver._onReceiveHeat += EnterTrigger;
+                    _distributionReceiver._onReceiveHeat += StayTrigger;
+                    _distributionReceiver._onReceiveHeat += ExitTrigger;
                     break;
                 case IDistribute.ChemistryTypes.COLD:
-                    _chemistryReceiver._onReceiveFrost += EnterTrigger;
-                    _chemistryReceiver._onReceiveFrost += StayTrigger;
-                    _chemistryReceiver._onReceiveFrost += ExitTrigger;
+                    _distributionReceiver._onReceiveFrost += EnterTrigger;
+                    _distributionReceiver._onReceiveFrost += StayTrigger;
+                    _distributionReceiver._onReceiveFrost += ExitTrigger;
                     break;
                 case IDistribute.ChemistryTypes.ELECTRICITY:
-                    _chemistryReceiver._onReceiveElectricity += EnterTrigger;
-                    _chemistryReceiver._onReceiveElectricity += StayTrigger;
-                    _chemistryReceiver._onReceiveElectricity += ExitTrigger;
+                    _distributionReceiver._onReceiveElectricity += EnterTrigger;
+                    _distributionReceiver._onReceiveElectricity += StayTrigger;
+                    _distributionReceiver._onReceiveElectricity += ExitTrigger;
                     break;
                 default:
                     break;

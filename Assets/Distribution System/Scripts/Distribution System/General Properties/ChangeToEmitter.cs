@@ -8,6 +8,7 @@ namespace DistributionSystem
 {
     public class ChangeToEmitter : AProperty
     {
+        [Header("Propertie-Parameter")]
         [SerializeField] ADistributeEmitter _emitter;
         [SerializeField, Range(0f, 1f)] float _pointToChange;
         [SerializeField] bool _receiveRemeins = true;

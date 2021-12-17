@@ -8,6 +8,7 @@ namespace DistributionSystem
 {
     public class ChangeMaterialColor : AProperty
     {
+        [Header("Propertie-Parameter")]
         [SerializeField] Renderer _renderer;
         [SerializeField] Color _endColor;
         private Color _materialColor, _stepColor;

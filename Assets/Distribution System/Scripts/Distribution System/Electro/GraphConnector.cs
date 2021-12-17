@@ -9,7 +9,7 @@ namespace DistributionSystem
     {
         protected override void Awake()
         {
-            _chemistryReceiver = _elementReceiver.ChemistryReceiver;
+            _chemistryReceiver = _elementReceiver.DistributionReceiver;
 
             GraphSystem.AddBaseGraph(_originalGraph);
             GraphSystem.graphs[_originalGraph].Add(this);
