@@ -18,9 +18,6 @@ namespace DistributionSystem
                 }
             }
         }
-
-        //TODO override from new emit type ... no enter or exit event
-
         public override void RemoveEmitType(ADistributeEmitter emitter, IDistribute.ChemistryTypes type)
         {
             if (emitter is GraphDistributeEmitter) _activeEmitter.Remove((IDistributeEmitter)emitter);

@@ -7,7 +7,7 @@ namespace DistributionSystem
 {
     public class GraphMember : AProperty
     {
-        public string _originalGraph;
+        [CustomAttribute.HideInNormalInspector] public string _originalGraph;
         public bool AbleToReceive
         {
             get
@@ -22,6 +22,8 @@ namespace DistributionSystem
         protected override void Awake()
         {
             base.Awake();
+
+            _originalGraph = transform.parent.parent.gameObject.name.Split('_')[1];
 
             GraphSystem.AddBaseGraph(_originalGraph);
             GraphSystem.graphs[_originalGraph].Add(this);
