@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace DistributionSystem
 {
-    public class GraphChemistryReceiver : ADistributeReceiver
+    public class GraphDistributeReceiver : ADistributeReceiver
     {
         protected override void TriggerEvents(IDistributeReceiver.Status status, Collider other)
         {
