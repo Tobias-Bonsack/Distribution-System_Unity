@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4682373986263285775}
   - component: {fileID: 1469510595870399088}
   - component: {fileID: 4787776688616127331}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Emitter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -446,7 +446,7 @@ GameObject:
   - component: {fileID: 2532025777097710061}
   - component: {fileID: 5693765969555357940}
   - component: {fileID: 5580189306450394500}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Receiver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
