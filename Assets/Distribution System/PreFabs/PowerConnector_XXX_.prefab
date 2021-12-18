@@ -63,7 +63,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 2
   _elementReceiver: {fileID: 2973018146334778270}
-  _renderer: {fileID: 0}
+  _renderer: {fileID: 3114151001189466527}
   _endColor: {r: 1, g: 1, b: 0, a: 0}
 --- !u!114 &6958280274573735239
 MonoBehaviour:
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 2
-  _distributionReceiver: {fileID: 0}
+  _distributionReceiver: {fileID: 3221884305677272682}
   _susceptibility: 1
   _ableToReceive: 1
 --- !u!1 &3542227914644336776

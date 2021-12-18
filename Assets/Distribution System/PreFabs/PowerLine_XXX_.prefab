@@ -333,7 +333,7 @@ MonoBehaviour:
   _weaknessType: 3
   _timeMultiplier: 0.5
   _timeBetweenCooldown: 0.5
-  _rateToCooldown: 0.01
+  _rateToCooldown: 0.05
   _ignoreTriggerChange: 1
 --- !u!1 &6354860916021527275
 GameObject:
@@ -527,6 +527,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _type: 2
-  _distributionReceiver: {fileID: 0}
+  _distributionReceiver: {fileID: 5693765969555357940}
   _susceptibility: 1
   _ableToReceive: 1

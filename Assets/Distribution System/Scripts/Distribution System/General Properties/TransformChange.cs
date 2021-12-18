@@ -45,11 +45,15 @@ namespace DistributionSystem
                 _originPosition = _toChange.position;
                 _originRotation = _toChange.rotation.eulerAngles;
                 _originScale = _toChange.localScale;
+
+                Debug.Log(_originPosition);
+                Debug.Log(_originRotation);
+                Debug.Log(_originScale);
             }
 
             float range = _pointToEndChange - _pointToStartChagne;
             float fromStart = _elementReceiver.ElementPercent - _pointToStartChagne;
-            if (fromStart < range)
+            if (fromStart < range && fromStart >= 0f)
             {
                 float changePercent = Mathf.Clamp(fromStart, 0f, range) / range;
                 if (_changePosition) _toChange.position = _originPosition + _addPosition * changePercent;

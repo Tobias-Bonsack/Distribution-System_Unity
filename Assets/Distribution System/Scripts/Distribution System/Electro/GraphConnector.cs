@@ -10,6 +10,8 @@ namespace DistributionSystem
         protected override void Awake()
         {
             _chemistryReceiver = _elementReceiver.DistributionReceiver;
+            _originalGraph = transform.parent.parent.gameObject.name.Split('_')[1];
+
 
             GraphSystem.AddBaseGraph(_originalGraph);
             GraphSystem.graphs[_originalGraph].Add(this);
