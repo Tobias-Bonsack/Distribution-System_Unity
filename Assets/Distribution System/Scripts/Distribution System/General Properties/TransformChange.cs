@@ -30,9 +30,7 @@ namespace DistributionSystem
         protected override void Awake()
         {
             base.Awake();
-            _originPosition = _toChange.position;
-            _originRotation = _toChange.rotation.eulerAngles;
-            _originScale = _toChange.localScale;
+            UpdateOriginalTransform();
 
             _elementReceiver._onElementPercentChange += ChangeScale;
         }
@@ -42,13 +40,7 @@ namespace DistributionSystem
             if (!_knowOrigin && _elementReceiver.ElementPercent >= _pointToStartChagne)
             {
                 _knowOrigin = true;
-                _originPosition = _toChange.position;
-                _originRotation = _toChange.rotation.eulerAngles;
-                _originScale = _toChange.localScale;
-
-                Debug.Log(_originPosition);
-                Debug.Log(_originRotation);
-                Debug.Log(_originScale);
+                UpdateOriginalTransform();
             }
 
             float range = _pointToEndChange - _pointToStartChagne;
@@ -60,6 +52,13 @@ namespace DistributionSystem
                 if (_changeRotation) _toChange.rotation = Quaternion.Euler(_originRotation + _addRotation * changePercent);
                 if (_changeScale) _toChange.localScale = _originScale + _addScale * changePercent;
             }
+        }
+
+        private void UpdateOriginalTransform()
+        {
+            _originPosition = _toChange.position;
+            _originRotation = _toChange.rotation.eulerAngles;
+            _originScale = _toChange.localScale;
         }
     }
 }

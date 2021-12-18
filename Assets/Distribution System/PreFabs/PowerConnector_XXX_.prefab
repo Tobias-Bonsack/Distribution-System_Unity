@@ -365,7 +365,7 @@ MonoBehaviour:
   _typeOfEffect: 02000000
   _effects:
   - {fileID: 2391951432732949905}
-  _member: {fileID: 0}
+  _member: {fileID: 8406113020253310401}
 --- !u!2083052967 &2391951432732949905
 VisualEffect:
   m_ObjectHideFlags: 0
