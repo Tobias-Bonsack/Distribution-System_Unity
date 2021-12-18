@@ -29,9 +29,9 @@ namespace DistributionSystem
         {
             if (e._status == IDistributeReceiver.Status.ENTER)
             {
-                if (sender is GraphMemberEmitter)
+                if (sender is GraphDistributeEmitter)
                 { // Fusion of graphen
-                    GraphMemberEmitter emitter = (GraphMemberEmitter)sender;
+                    GraphDistributeEmitter emitter = (GraphDistributeEmitter)sender;
                     string emitterGraphName = emitter.GRAPH_NAME;
                     string graphName = _originalGraph;
 
@@ -52,9 +52,9 @@ namespace DistributionSystem
         {
             if (e._status == IDistributeReceiver.Status.EXIT)
             {
-                if (sender is GraphMemberEmitter)
+                if (sender is GraphDistributeEmitter)
                 { // Defusion of graphen
-                    GraphMemberEmitter emitter = (GraphMemberEmitter)sender;
+                    GraphDistributeEmitter emitter = (GraphDistributeEmitter)sender;
                     GraphSystem.RemoveCombineGraph(_originalGraph + ":" + emitter.GRAPH_NAME, emitter.GetHashCode());
                 }
                 else

@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace DistributionSystem
 {
-    public class GraphMemberEmitter : ADistributeEmitter
+    public class GraphDistributeEmitter : ADistributeEmitter
     {
         [SerializeField] GraphMember _member;
         public string GRAPH_NAME

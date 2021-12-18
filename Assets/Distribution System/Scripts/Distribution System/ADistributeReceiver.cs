@@ -106,7 +106,7 @@ namespace DistributionSystem
         }
         public virtual void RemoveEmitType(ADistributeEmitter emitter, IDistribute.ChemistryTypes type)
         {
-            if (emitter is GraphMemberEmitter) _activeEmitter.Remove((IDistributeEmitter)emitter);
+            if (emitter is GraphDistributeEmitter) _activeEmitter.Remove((IDistributeEmitter)emitter);
             TriggerElementEvents(IDistributeReceiver.Status.EXIT, emitter, type, 0f);
         }
 

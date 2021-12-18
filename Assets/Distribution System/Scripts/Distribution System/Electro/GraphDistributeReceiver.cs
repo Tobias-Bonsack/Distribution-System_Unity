@@ -23,7 +23,7 @@ namespace DistributionSystem
 
         public override void RemoveEmitType(ADistributeEmitter emitter, IDistribute.ChemistryTypes type)
         {
-            if (emitter is GraphMemberEmitter) _activeEmitter.Remove((IDistributeEmitter)emitter);
+            if (emitter is GraphDistributeEmitter) _activeEmitter.Remove((IDistributeEmitter)emitter);
         }
     }
 }
