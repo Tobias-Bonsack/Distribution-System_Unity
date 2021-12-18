@@ -11,6 +11,7 @@ namespace DistributionSystem
     [RequireComponent(typeof(VisualEffect))]
     public class Destructible : AProperty
     {
+        [Header("Propertie-Parameter")]
         [SerializeField] GameObject _objectToDestroy;
         [SerializeField, Range(0f, 1f)] float _pointToDestroy = 1f;
         private VisualEffect _visualEffect;

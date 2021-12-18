@@ -7,6 +7,7 @@ namespace DistributionSystem
 {
     public class RemoveEmitter : AProperty
     {
+        [Header("Propertie-Parameter")]
         [SerializeField] ADistributeEmitter _emitter;
         [SerializeField, Range(0f, 1f)] float _percentToRemove;
         [SerializeField] bool _destroyAfterRemove = false;

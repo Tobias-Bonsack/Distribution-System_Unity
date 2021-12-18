@@ -8,6 +8,7 @@ namespace DistributionSystem
 {
     public class ReduceElementPercent : AProperty
     {
+        [Header("Propertie-Parameter")]
         [SerializeField, Tooltip("Starts the Routine in the Awake-Mehtod")] bool _alwaysReduce = false;
         [SerializeField] IDistribute.ChemistryTypes _weaknessType;
         [SerializeField, Range(0f, 2f), Tooltip("If weakness type is in range, _timeBetweenCooldown get multiplied with")] float _timeMultiplier = 0.5f;

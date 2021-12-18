@@ -10,6 +10,7 @@ namespace DistributionSystem
     [RequireComponent(typeof(VisualEffect))]
     public class ReceiveEffect : AProperty
     {
+        [Header("Propertie-Parameter")]
         VisualEffect _visualEffect;
 
         protected override void Awake()

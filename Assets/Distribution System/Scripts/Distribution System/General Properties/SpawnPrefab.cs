@@ -6,6 +6,7 @@ namespace DistributionSystem
 {
     public class SpawnPrefab : AProperty
     {
+        [Header("Propertie-Parameter")]
         [SerializeField] GameObject _preFabToSpawn;
         [SerializeField] GameObject _objectForRespawn;
         [SerializeField, Tooltip("If null -> Destroy GameObject")] Transform _respawn;

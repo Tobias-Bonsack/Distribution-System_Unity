@@ -7,6 +7,7 @@ namespace DistributionSystem
 {
     public class TransformChange : AProperty
     {
+        [Header("Propertie-Parameter")]
         [SerializeField] Transform _toChange;
         [SerializeField, Range(0f, 1f)] float _pointToStartChagne = 0f, _pointToEndChange = 1f;
         private bool _knowOrigin = false;
@@ -45,7 +46,7 @@ namespace DistributionSystem
                 _originRotation = _toChange.rotation.eulerAngles;
                 _originScale = _toChange.localScale;
             }
-            
+
             float range = _pointToEndChange - _pointToStartChagne;
             float fromStart = _elementReceiver.ElementPercent - _pointToStartChagne;
             if (fromStart < range)
