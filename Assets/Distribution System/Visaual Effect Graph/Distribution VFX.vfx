@@ -18,9 +18,9 @@ MonoBehaviour:
   uiBounds:
     serializedVersion: 2
     x: 246
-    y: -238
-    width: 1530
-    height: 2498
+    y: -239
+    width: 1531
+    height: 2418
 --- !u!114 &114350483966674976
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -101,8 +101,8 @@ MonoBehaviour:
     max: Infinity
     enumValues: []
     descendantCount: 0
-  - name: Velocity A
-    path: Velocity A
+  - name: Velocity(from)
+    path: Velocity(from)
     tooltip: 
     sheetType: m_Vector3f
     realType: Vector3
@@ -115,8 +115,8 @@ MonoBehaviour:
     max: Infinity
     enumValues: []
     descendantCount: 0
-  - name: Velocity B
-    path: Velocity B
+  - name: Velocity(to)
+    path: Velocity(to)
     tooltip: 
     sheetType: m_Vector3f
     realType: Vector3
@@ -129,8 +129,8 @@ MonoBehaviour:
     max: Infinity
     enumValues: []
     descendantCount: 0
-  - name: Lifetime A
-    path: Lifetime A
+  - name: Lifetime(from)
+    path: Lifetime(from)
     tooltip: 
     sheetType: m_Float
     realType: Single
@@ -143,8 +143,8 @@ MonoBehaviour:
     max: Infinity
     enumValues: []
     descendantCount: 0
-  - name: Lifetime B
-    path: Lifetime B
+  - name: Lifetime(to)
+    path: Lifetime(to)
     tooltip: 
     sheetType: m_Float
     realType: Single
@@ -1313,7 +1313,7 @@ MonoBehaviour:
   m_InputSlots: []
   m_OutputSlots:
   - {fileID: 8926484042661614602}
-  m_ExposedName: Velocity A
+  m_ExposedName: Velocity(from)
   m_Exposed: 1
   m_Order: 3
   m_Category: 
@@ -1495,7 +1495,7 @@ MonoBehaviour:
   m_InputSlots: []
   m_OutputSlots:
   - {fileID: 8926484042661614607}
-  m_ExposedName: Velocity B
+  m_ExposedName: Velocity(to)
   m_Exposed: 1
   m_Order: 4
   m_Category: 
@@ -1677,7 +1677,7 @@ MonoBehaviour:
   m_InputSlots: []
   m_OutputSlots:
   - {fileID: 8926484042661614622}
-  m_ExposedName: Lifetime A
+  m_ExposedName: Lifetime(from)
   m_Exposed: 1
   m_Order: 5
   m_Category: 
@@ -1757,7 +1757,7 @@ MonoBehaviour:
   m_InputSlots: []
   m_OutputSlots:
   - {fileID: 8926484042661614624}
-  m_ExposedName: Lifetime B
+  m_ExposedName: Lifetime(to)
   m_Exposed: 1
   m_Order: 6
   m_Category: 
