@@ -312,6 +312,6 @@ MonoBehaviour:
   _alwaysReduce: 0
   _weaknessType: 3
   _timeMultiplier: 0.5
-  _timeBetweenCooldown: 0.5
-  _rateToCooldown: 0.01
+  _timeBetweenCooldown: 0.01
+  _rateToCooldown: 0.001
   _ignoreTriggerChange: 0

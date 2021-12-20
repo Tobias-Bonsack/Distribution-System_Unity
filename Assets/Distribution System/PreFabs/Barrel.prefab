@@ -295,7 +295,7 @@ VisualEffect:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2149339779237329590}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Asset: {fileID: 8926484042661614526, guid: f181b3183c78aee439783adaf4dcb7bb, type: 3}
   m_InitialEventName: OnPlay
   m_InitialEventNameOverriden: 0
@@ -314,6 +314,12 @@ VisualEffect:
       - m_Value: 0
         m_Name: Size
         m_Overridden: 0
+      - m_Value: 1
+        m_Name: Lifetime(from)
+        m_Overridden: 1
+      - m_Value: 3
+        m_Name: Lifetime(to)
+        m_Overridden: 1
     m_Vector2f:
       m_Array: []
     m_Vector3f:
@@ -326,6 +332,12 @@ VisualEffect:
         m_Overridden: 1
       - m_Value: {x: 0.25, y: 0.5, z: 0.25}
         m_Name: Velocity B
+        m_Overridden: 1
+      - m_Value: {x: -0.1, y: 0.1, z: -0.1}
+        m_Name: Velocity(from)
+        m_Overridden: 1
+      - m_Value: {x: 0.1, y: 1, z: 0.1}
+        m_Name: Velocity(to)
         m_Overridden: 1
     m_Vector4f:
       m_Array: []

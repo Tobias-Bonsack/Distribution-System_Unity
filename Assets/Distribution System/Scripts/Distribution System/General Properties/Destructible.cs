@@ -40,7 +40,7 @@ namespace DistributionSystem
             {
                 transform.parent = null;
                 Destroy(_objectToDestroy);
-                StartCoroutine(WaitToDestroy(_visualEffect.GetFloat("Lifetime B")));
+                StartCoroutine(WaitToDestroy(_visualEffect.GetFloat("Lifetime(to)")));
             }
         }
 
