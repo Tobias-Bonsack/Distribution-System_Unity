@@ -31,24 +31,8 @@ namespace DistributionSystem
                 _elementReceiver._onAbleToReceiveChange += AbleToReceiveChange;
             }
 
-            switch (_weaknessType)
-            {
-                case IDistribute.ChemistryTypes.HEAT:
-                    _chemistryReceiver._onReceiveHeat += WeaknesEnterTrigger;
-                    _chemistryReceiver._onReceiveHeat += WeaknesExitTrigger;
-                    break;
-                case IDistribute.ChemistryTypes.COLD:
-                    _chemistryReceiver._onReceiveFrost += WeaknesEnterTrigger;
-                    _chemistryReceiver._onReceiveFrost += WeaknesExitTrigger;
-                    break;
-                case IDistribute.ChemistryTypes.ELECTRICITY:
-                    _chemistryReceiver._onReceiveElectricity += WeaknesEnterTrigger;
-                    _chemistryReceiver._onReceiveElectricity += WeaknesExitTrigger;
-                    break;
-                default:
-                    break;
-            }
-
+            RegisterMethodToElement(_weaknessType, WeaknesEnterTrigger);
+            RegisterMethodToElement(_weaknessType, WeaknesExitTrigger);
         }
 
         private void AbleToReceiveChange(object sender, EventArgs e)
@@ -103,6 +87,16 @@ namespace DistributionSystem
                 float newValue = Mathf.Clamp(_elementReceiver.ElementPercent - _rateToCooldown, 0f, 1f);
                 _elementReceiver.ElementPercent = newValue;
                 yield return new WaitForSeconds(_timeBetweenCooldown);
+            }
+        }
+
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+            if (!_alwaysReduce)
+            {
+                if (!_ignoreTriggerChange) _elementReceiver._onActiveTriggerChange -= TriggerChange;
+                _elementReceiver._onAbleToReceiveChange -= AbleToReceiveChange;
             }
         }
     }

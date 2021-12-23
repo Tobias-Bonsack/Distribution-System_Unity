@@ -60,5 +60,11 @@ namespace DistributionSystem
             _originRotation = _toChange.rotation.eulerAngles;
             _originScale = _toChange.localScale;
         }
+
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+            _elementReceiver._onElementPercentChange -= ChangeScale;
+        }
     }
 }

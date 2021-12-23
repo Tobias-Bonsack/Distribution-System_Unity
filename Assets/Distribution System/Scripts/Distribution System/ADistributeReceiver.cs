@@ -118,6 +118,30 @@ namespace DistributionSystem
             }
         }
 
+        public void UnSubscriberToElement(bool subscribe, IDistribute.ChemistryTypes type, EventHandler<ADistributeReceiver.OnReceiveElementArgs> method)
+        {
+            switch (type)
+            {
+                case IDistribute.ChemistryTypes.HEAT:
+                    if (subscribe) _onReceiveHeat += method;
+                    else _onReceiveHeat -= method;
+                    break;
+                case IDistribute.ChemistryTypes.COLD:
+                    if (subscribe) _onReceiveFrost += method;
+                    else _onReceiveFrost -= method;
+                    break;
+                case IDistribute.ChemistryTypes.ELECTRICITY:
+                    if (subscribe) _onReceiveElectricity += method;
+                    else _onReceiveElectricity -= method;
+                    break;
+                case IDistribute.ChemistryTypes.NOTHING:
+                    break;
+                default:
+                    Debug.LogError("No such type found: " + type);
+                    break;
+            }
+        }
+
     }
 
 }

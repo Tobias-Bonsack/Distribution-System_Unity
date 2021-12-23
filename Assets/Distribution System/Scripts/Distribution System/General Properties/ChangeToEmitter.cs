@@ -64,5 +64,12 @@ namespace DistributionSystem
             if (isAdd) _emitter.AddType(_type, _radiance);
             else _emitter.RemoveType(_type, _radiance);
         }
+
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+            _elementReceiver._onElementPercentChange -= OnBurnPercentChange;
+
+        }
     }
 }

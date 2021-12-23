@@ -35,5 +35,12 @@ namespace DistributionSystem
                 Destroy(_toDestroy);
             }
         }
+
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+            _elementReceiver._onElementPercentChange -= ElementPercentChange;
+        }
+
     }
 }

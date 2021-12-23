@@ -25,5 +25,12 @@ namespace DistributionSystem
             Color color = _materialColor + (_stepColor * _elementReceiver.ElementPercent);
             _renderer.material.SetColor("_BaseColor", color);
         }
+
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+            _elementReceiver._onElementPercentChange -= OnBurnPercentChange;
+
+        }
     }
 }

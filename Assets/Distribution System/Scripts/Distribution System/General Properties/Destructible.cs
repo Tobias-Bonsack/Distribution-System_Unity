@@ -20,18 +20,7 @@ namespace DistributionSystem
         {
             base.Awake();
             _visualEffect = GetComponent<VisualEffect>();
-
-            switch (_type)
-            {
-                case IDistribute.ChemistryTypes.HEAT:
-                    _chemistryReceiver._onReceiveHeat += StayTrigger;
-                    break;
-                case IDistribute.ChemistryTypes.COLD:
-                    _chemistryReceiver._onReceiveFrost += StayTrigger;
-                    break;
-                default:
-                    break;
-            }
+            RegisterMethodToElement(_type, StayTrigger);
         }
 
         private void StayTrigger(object sender, DistributeReceiver.OnReceiveElementArgs e)
@@ -49,21 +38,6 @@ namespace DistributionSystem
             _visualEffect.enabled = true;
             yield return new WaitForSeconds(maxLifespan);
             Destroy(gameObject);
-        }
-
-        void OnDestroy()
-        {
-            switch (_type)
-            {
-                case IDistribute.ChemistryTypes.HEAT:
-                    _chemistryReceiver._onReceiveHeat -= StayTrigger;
-                    break;
-                case IDistribute.ChemistryTypes.COLD:
-                    _chemistryReceiver._onReceiveFrost -= StayTrigger;
-                    break;
-                default:
-                    break;
-            }
         }
     }
 }

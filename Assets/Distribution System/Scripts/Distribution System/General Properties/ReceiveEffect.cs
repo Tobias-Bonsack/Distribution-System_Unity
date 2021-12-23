@@ -24,5 +24,11 @@ namespace DistributionSystem
         {
             _visualEffect.enabled = _elementReceiver.ActiveTriggers != 0;
         }
+
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+            _elementReceiver._onActiveTriggerChange -= Triggerchange;
+        }
     }
 }
